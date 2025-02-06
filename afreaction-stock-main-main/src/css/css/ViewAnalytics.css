@@ -1,0 +1,92 @@
+/* General Container Styling */
+.view-analytics-page {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #343a40;
+  }
+  
+  /* Title and Description */
+  .title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #6c757d;
+  }
+  
+  /* Error Message */
+  .error-message {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #f8d7da;
+    color: #721c24;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  /* Loading Spinner */
+  .loading-spinner {
+    text-align: center;
+  }
+  
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Dashboard and Chart Styling */
+  .analytics-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .chart-container {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .chart-container h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #343a40;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .analytics-dashboard {
+      grid-template-columns: 1fr;
+    }
+  }
+  

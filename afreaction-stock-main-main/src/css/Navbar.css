@@ -1,0 +1,162 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    transition: background-color 0.3s ease;
+    z-index: 100;
+}
+
+/*.Navbar .logo {*/
+/*    fill: #fff;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+.Navbar .menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.Navbar .menu-item {
+    font-family: 'Open Sans', 'Helvetica Neue';
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.Navbar .menu-item:hover {
+    color: #feb47b; /* Highlight effect */
+    transform: scale(1.1);
+}
+
+.Navbar .hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.Navbar .search-form {
+    display: none;
+    align-items: center;
+    height: 2.5rem;
+    width: 50%;
+    border: 1px solid #b6b6b6;
+    border-radius: 1.5rem; /* Rounded for a modern look */
+    background-color: #fff;
+    transition: width 0.3s ease, height 0.3s ease;
+    overflow: hidden;
+}
+
+.Navbar .search-form .submit-btn {
+    display: none;
+}
+
+.Navbar .search-form .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    height: 100%;
+    width: 1.5rem;
+    border: none;
+    border-radius: 1.5rem 0 0 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+
+}
+
+.Navbar .search-form input {
+    flex-grow: 2;
+    height: 100%;
+    border: none;
+    padding: 0 1rem;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.Navbar .search-form select {
+    height: 100%;
+    border: none;
+    padding: 0 1rem;
+    background-color: #fff;
+    border-radius: 1.5rem 0 0 1.5rem;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.Navbar .nav-btn, .Navbar .login-btn, .Navbar .signup-btn {
+    font-family: 'Open Sans', 'Helvetica Neue';
+    font-size: 1rem;
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding-left: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.Navbar .nav-btn:hover,
+.Navbar .pricing-btn:hover,
+.Navbar .login-btn:hover,
+.Navbar .signup-btn:hover {
+    color: #feb47b; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly scale up the button */
+}
+
+/* Sticky Navbar Styles */
+.Navbar.stickyNav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fafafa; /* Subtle background for sticky navbar */
+    color: #000;
+    z-index: 10;
+    transition: background-color 0.2s ease, padding 0.3s ease;
+}
+
+.Navbar.stickyNav .logo path {
+    fill: #000;
+}
+
+.Navbar.stickyNav .search-form {
+    display: flex; /* Make the search form visible in sticky mode */
+    height: 3rem; /* Ensure consistent height when sticky */
+    width: 60%; /* Slightly wider for visibility */
+    max-width: 700px; /* Limit the width for large screens */
+    border: 1px solid #ddd;
+    border-radius: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for elevation */
+}
+
+.Navbar.stickyNav .nav-btn,
+.Navbar.stickyNav .login-btn,
+.Navbar.stickyNav .signup-btn {
+    color: #000;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+
+    .Navbar .search-form {
+        display: none; /* Hide search bar for mobile screens */
+    }
+
+    .Navbar.stickyNav .search-form {
+        display: flex;
+        height: 2.8rem;
+        width: 90%; /* Expand to fill smaller screens */
+    }
+
+    .Navbar.stickyNav {
+        padding: 0.5rem 5%; /* Compact padding for sticky on small screens */
+    }
+}

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+/*CSS Table Of Content Starts Here*/
+
+/*============================================ 
+# Template Name: Aseet
+# Version: 1.0
+# Date: 04/08/2023
+# Author: gramentheme
+# Author URI: https://themeforest.net/user/gramentheme
+# Description: Aseet - HTML Templates
+============================================*/
+
+/*======== scss compiles =========
+# mixin
+# variables
+# Typography
+# button 
+# animation
+# banner
+# blog
+# header
+# section
+# footer
+============================================*/
+
+/*CSS Table Of Content Ends Here*/
+
+//--Abstracts--//
+@import "mixins";
+@import "variables";
+//--Abstracts--//
+
+//--Base--//
+@import "typography";
+//--Base--//
+
+//--Layout--//
+@import "header";
+@import "banner";
+@import "section";
+@import "animation";
+@import "blog";
+@import "footer";
+//--Layout--//
+
+//--Components--//
+@import "buttons";
+//--Components--//
+
+//--css includeing--//
+@import "all.min.css";
+@import "animate.css";
+@import "audioplayer.css";
+@import "google-font.css";
+@import "magnific-popup.css";
+@import "nice-select.css";
+@import "odometer.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.css";
+@import "slickslider.css";
+//--css includeing--//

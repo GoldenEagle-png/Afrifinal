@@ -1,0 +1,511 @@
+//banner version one
+.banner__v1search{
+    background: var(--white);
+    border-radius: 100px;
+    padding: 16px 20px;
+    form{
+        border-left: 1px solid #D9D9D9;
+        width: 100%;
+        input{
+            background: none;
+            outline: none;
+            border: unset;
+            font-size: 16px;
+            color: #BDBDBD;
+            padding: 10px 16px;
+            width: 100%;
+        }
+        ::placeholder{
+            color: #BDBDBD;
+        }
+        i{
+            font-size: 32px;
+            color: #979797;
+        }
+        button{
+            background: none;
+            border: unset;
+            padding: 0;
+            margin-bottom: -6px;
+        }
+    }
+    .nice-select{
+        border: unset;
+        background: none;
+        border-radius: 0;
+        color: var(--title);
+        font-weight: 500;
+    }
+    .nice-select:after {
+        right: 23px;
+        border-bottom: 1px solid var(--ftext);
+        border-right: 1px solid var(--ftext);
+        width: 8px;
+        height: 8px;
+    }
+    @include breakpoint(max-md){
+        padding: 10px 14px;
+    }
+    @include breakpoint(max-xs){
+        padding: 5px 10px;
+        form{
+            input{
+                padding: 10px 10px;
+            }
+            i{
+                font-size: 24px;
+            }
+        }
+        .nice-select{
+            padding: 13px 18px 13px 8px;
+            font-size: 14px;
+        }
+    }
+}
+//banner version one
+
+//banner slider thumb
+.v1__slideone{
+    background: url(../../assets/img/banner/slide1.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 100px 0 115px;
+}
+.v1__slidetwo{
+    background: url(../../assets/img/banner/slide2.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 100px 0 115px;
+}
+.v1__slidethree{
+    background: url(../../assets/img/banner/slide3.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 100px 0 115px;
+}
+.banner__v1{
+    text-align: center;
+    max-width: 1030px;
+    margin: 0 auto;
+    .display__one{
+        margin-bottom: 48px;
+        font-size: 76px;
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1.2;
+        text-transform: capitalize;
+        @include bodyfont;
+        display: block;
+        @include breakpoint(max-xl){
+            font-size: 60px;
+        }
+        @include breakpoint(max-lg){
+            font-size: 46px;
+        }
+        @include breakpoint(max-sm){
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 38px;
+        }
+        @include breakpoint(max-xs){
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 30px;
+        }
+    }
+}
+//banner slider thumb
+
+//banner video three
+.banner__videov3{
+    margin: 0 95px 130px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 700px;
+    .banner__videocover{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            background: rgba(10, 32, 76, 0.54);
+        }
+    }
+    .display__big{
+        font-size: 95px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 28px;
+        text-transform: capitalize;
+        @include breakpoint(max-xl){
+            font-size: 60px;
+            margin-bottom: -15px !important;
+        }
+        @include breakpoint(max-md){
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: -15px !important;
+        }
+        @include breakpoint(max-sm){
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: -15px !important;
+        }
+        @include breakpoint(max-xxs){
+            font-size: 29px;
+            font-weight: 500;
+            margin-bottom: -30px !important;
+        }
+    }
+    .vdo{
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    .banner__contentthree{
+        padding: 120px 10px 120px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 1019px;
+        margin: 0 auto;
+        z-index: 1;
+    }
+    @include breakpoint(max-lg){
+        margin: 0 10px 80px;
+    }
+    .bn__cate {
+        @include breakpoint(max-xxl){
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+    }
+}
+//banner video three
+
+//banner version two
+.banner__v2{
+    padding: 100px 0 240px;
+    position: relative;
+    .display__one{
+        font-size: 70px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    p{
+        max-width: 602px;
+    }
+    .bn__btn{
+        border-radius: 6px;
+    }
+    .updown{
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        animation: updown 3s linear infinite;
+    }
+    @include breakpoint(max-xxl){
+        .display__one{
+            font-size: 60px;
+            font-weight: 700;
+        }
+    }
+    @include breakpoint(max-xl){
+        .display__one{
+            font-size: 48px;
+            font-weight: 700;
+        }
+    }
+    @include breakpoint(max-lg){
+        padding: 100px 0 140px;
+    }
+    @include breakpoint(max-md){
+        padding: 100px 0 100px;
+        .updown{
+            bottom: 0px;
+        }
+        .display__one{
+            font-size: 36px;
+            font-weight: 700;
+        }
+        p{
+            margin-bottom: 35px;
+        }
+    }
+    @include breakpoint(max-xs){
+        .display__one{
+            font-size: 30px;
+            font-weight: 700;
+        }
+    }
+}
+.bntwo__audio{
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.20) 100%);
+    box-shadow: -4px 8px 56px 0px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(7.5px);
+    padding: 16px 32px;
+    position: absolute;
+    bottom: 100px;
+    left: 80px;
+    width: 470px;
+    animation: updown 3s linear infinite;
+    .audioplayer:not(.audioplayer-playing) .audioplayer-playpause {
+        background: transparent;    
+        border: 1px solid var(--white);
+        a{
+            border-left: 12px solid var(--white);
+        }
+    }
+    .audioplayer{
+        display: block;
+        width: initial;
+        margin-top: -19px;
+    }
+    .audioplayer-volume,
+    .audioplayer-time-duration,
+    .audioplayer-bar,
+    .audioplayer-time ,
+    .audioplayer-time-current{
+        display: none;
+    }
+    @include breakpoint(max-xl){
+        width: 350px;
+    }
+    @include breakpoint(max-xl){
+        bottom: 100px;
+        left: 20px;
+    }
+    @include breakpoint(max-xxs){
+        width: 300px;
+        bottom: 40px;
+        left: 10px;
+        padding: 16px 14px;
+    }
+}
+.banner__thumb2{
+    position: absolute;
+    bottom: 0;
+    left: calc(55% - 20px);
+    .min__thumb{
+        @include breakpoint(max-xl){
+            width: 100%;
+             object-fit: contain;
+        }
+    }
+    @include breakpoint(max-lg){
+        position: initial;
+    }
+}
+//banner version two
+
+//banner two section
+.banner__header__attachment{
+    background: url(../../assets/img/banner/home-2-bg-banner.png) no-repeat center center;
+    background-size: cover;
+}
+//banner two section
+
+//banner themessell section
+.banner__themessell{
+    background: url(../../assets/img/banner/banner-bg.png) no-repeat center center;
+    background-size: cover;
+}
+.banner__themesection{
+    padding: 136px 0 110px;
+    @include breakpoint(max-lg){
+        padding: 90px 0 110px;
+    }
+    @include breakpoint(max-lg){
+        padding: 70px 0 90px;
+    }
+}
+.banner__themecontent{
+    .theme__subtitle{
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 5.4px;
+        text-transform: capitalize;
+        color: var(--base);
+        display: block;
+        margin-bottom: 25px;
+    }
+    .display__theme{
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: capitalize;
+        @include bodyfont;
+        color: var(--title);
+        display: block;
+        margin-bottom: 50px;
+    }
+    .bn__btn{
+        .cmn--btn{
+            padding: 15px 22px;
+            border-radius: 4px;
+        }
+        .outline__btn{
+            padding: 14px 22px;
+        }
+    }
+    @include breakpoint(max-xl){
+        .display__theme{
+            font-size: 48px;
+        }
+    }
+    @include breakpoint(max-lg){
+        .display__theme{
+            font-size: 60px;
+        }
+        margin-bottom: 50px;
+    }
+    @include breakpoint(max-md){
+        .display__theme{
+            font-size: 44px;
+            margin-bottom: 35px;
+        }
+    }
+    @include breakpoint(max-sm){
+        .display__theme{
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+    }
+    @include breakpoint(max-xs){
+        .theme__subtitle{
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .display__theme{
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+        .bn__btn{
+            gap: 15px !important;
+            .cmn--btn{
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+        }
+    }
+}
+.bn__themesell__thumb{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+    .bn__setting{
+        position: absolute;
+        width: 70px;
+        object-fit: contain;
+        top: 10px;
+        left: 10px;
+        animation: setting 2s linear infinite;
+        @include breakpoint(max-xs){
+            width: 50px;
+        }
+    }
+    .bn__sky{
+        width: 147px;
+        position: absolute;
+        top: -50px;
+        left: 40%;
+        animation: sky1 2s linear infinite;
+        @include breakpoint(max-lg){
+            top: -13px;
+        }
+    }
+    .bn__round{
+        width: 119px;
+        animation: zomin 2s linear infinite;
+        position: absolute;
+        right: -240px;
+        top: 40%;
+        img{
+            width: 100%;
+        }
+    }
+    .bn__roundsmall{
+        width: 20px;
+        position: absolute;
+        animation: zomin 2s linear infinite;
+        bottom: -60px;
+        left: 50%;
+        img{
+            width: 100%;
+        }
+    }
+}
+@keyframes setting {
+    50%{
+        transform: translateY(10px);
+    }
+}
+@keyframes sky1 {
+    50%{
+        transform: translateX(20px);
+    }
+}
+@keyframes zomin {
+    50%{
+        transform: scale(1.1);
+    }
+}
+//banner themessell section
+
+//banner breadumnd section
+.breadcumnd__bannerattach{
+    background: url(../../assets/img/banner/breadcumnd.png) no-repeat top center;
+    background-size: cover;
+}
+.banner__bread{
+    padding: 60px 0 120px;
+    @include breakpoint(max-xl){
+        padding: 70px 0 100px;
+    }
+    @include breakpoint(max-lg){
+        padding: 80px 0 90px;
+    }
+    @include breakpoint(max-sm){
+        padding: 60px 0 60px;
+    }
+}
+.breaded{
+    gap: 12px;
+    li{
+        a{
+            font-style: 14px;
+            font-weight: 500;
+            color: var(--title);
+        }
+        font-style: 14px;
+        font-weight: 500;
+        color: var(--title);
+        i{
+            font-style: 22px;
+            color: var(--title);
+            margin-top: 8px;
+        }
+    }
+}
+
+.breadbeffore{
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 600px;
+        background: url(../../assets/img/banner/breadcumnd.png) no-repeat center center;
+        background-size: cover;
+    }
+}
+//banner breadumnd section

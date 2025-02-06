@@ -1,0 +1,30 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when changes are pushed to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Runs the workflow on the latest Ubuntu environment
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3  # Checkout your code to the runner
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Specify the Node.js version (adjust as needed)
+
+      - name: Install dependencies
+        run: npm install  # Install the dependencies defined in package.json
+
+      - name: Build the React app
+        run: npm run build  # Build the production-ready app
+
+      - name: Deploy to GitHub Pages
+        run: npm run deploy  # Deploy the app to GitHub Pages using the deploy script
+        env:
+          CI: false  # Disable Continuous Integration mode for GitHub Pages deployment

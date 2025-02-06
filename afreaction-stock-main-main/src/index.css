@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans" ,'Roboto', sans-serif;
+}
+
+@media screen and (max-width: 1024px){
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  html {
+    font-size: 85%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 425px){
+  html {
+    font-size: 75%;
+  }
+}

@@ -1,0 +1,65 @@
+.auth__background {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth_signin__wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.auth_signin__content {
+    text-align: center;
+}
+
+.form__input {
+    width: 100%; /* Full width to match the login form */
+    padding: 12px; /* Increased padding for comfort */
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 16px; /* Adjusted font size for readability */
+}
+
+.cmn--btn {
+    background-color: #feb47b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cmn--btn:hover {
+    background-color: #ff7e5f;
+}
+
+
+
+.google__box, .white__btn {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    background: white;
+}
+
+.google__box img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.auth_signcreat {
+    margin-top: 20px;
+}

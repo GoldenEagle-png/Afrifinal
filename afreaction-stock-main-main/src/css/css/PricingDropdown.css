@@ -1,0 +1,155 @@
+.pricing-dropdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(254, 180, 123, 0.49);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.pricing-dropdown-container {
+    background: rgba(27, 27, 27, 0);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 1200px;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.pricing-dropdown-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pricing-dropdown-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.pricing-dropdown-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pricing__item {
+    background: #222;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 240px;
+    max-width: 240px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    border: 1px solid #444;
+}
+.pricing__item ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif; /* Apply the new font */
+    color: #fff; /* Ensure text color is readable */
+}
+
+.pricing__item h4 {
+    font-family: 'Roboto', sans-serif; /* Apply the new font to the title */
+}
+
+.pricing__item h2 {
+    font-family: 'Roboto', sans-serif; /* Apply the new font to the price */
+    font-weight: 700; /* Bold weight for emphasis */
+}
+.pricing__item:hover {
+    transform: scale(1.05);
+}
+
+.pricing__item h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pricing__item h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing__item span {
+    font-size: 1.1rem;
+    color: #bbb;
+}
+
+.pricing__item ul {
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.pricing__item ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.bullet {
+    color: #0f0; /* Change to your desired bullet color */
+    margin-right: 10px; /* Space between bullet and text */
+    font-size: 1.5rem; /* Size of the bullet */
+}
+.btnxy {
+    background: rgba(0, 255, 0, 0); /* Transparent background */
+    color: #ffffff; /* Text color */
+    padding: 12px 25px;
+    border: 2px solid #ffcc00; /* Border color */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.3s ease, border-color 0.3s ease; /* Smooth transition for background and border */
+}
+
+.btnxy:hover {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Sunset gradient */
+    border-color: #feb47b; /* Adjust border color on hover */
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

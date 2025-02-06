@@ -1,0 +1,381 @@
+//footer
+.footer__section{
+    background: var(--footer);
+    padding-top: 60px;
+    &::before{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 290px;
+        background: #1AEFD5;
+        filter: blur(217px);
+        width: 200px;
+        height: 200px;
+        content: "";
+
+    }
+}
+//footer speacial top
+.footer__top__social{
+    position: relative;
+    padding: 15px 0 6px;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 254px;
+        height: 100%;
+        width: 100%;
+        content: "";
+        background: url(../../assets/img/footer/footerbg.png) no-repeat center center;
+        background-size: cover;
+        @include breakpoint(max-xl4){
+            left: 0;
+        }
+    }
+    .footer__top__social-inner{
+        position: relative;
+        gap: 24px;
+        justify-content: space-between;
+        @include breakpoint(max-lg){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .footer-social{
+        gap: 14px;
+        justify-content: center;
+        li{
+            a{
+                position: relative;
+                padding: 28px 24px;
+                text-align: center;
+                i{
+                    font-size: 18px;
+                    color: var(--white);
+                    z-index: 1;
+                    position: relative;
+                    transition: all 0.4s;
+                }
+                &::before{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    width: 100%;
+                    content: "";
+                    background: var(--white);
+                    transition: all 0.4s;
+                }
+                @include breakpoint(max-lg){
+                    padding: 18px 14px;
+                }
+            }
+            &:hover{
+                a{
+                    &::before{
+                        height: 100%;
+                    }
+                    i{
+                        color: var(--base);
+                    }
+                }
+            }
+        }
+    }
+    .footer__infowrap{
+        gap: 110px;
+        @include breakpoint(max-xxl){
+            gap: 60px;
+        }
+        @include breakpoint(max-xl){
+            gap: 30px;
+        }
+        @include breakpoint(max-md){
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 20px;
+        }
+    }
+    .bottom__logo{
+        max-width: 150px;
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+        @include breakpoint(max-lg){
+            border-bottom: 1px solid var(--white);
+        }
+    }
+    @include breakpoint(max-md){
+        padding: 15px 0 40px;
+    }
+}
+//footer speacial top
+
+.subscribe__form{
+    input{
+        font-size: 16px;
+        color: var(--ftext);
+        border: none;
+        outline: none;
+        @include bodyfont;
+        background: none;
+        width: 100%;
+    }
+    ::placeholder{
+        color: var(--ftext);
+    }
+    button{
+        background: none;
+        i{
+            color: var(--white);
+            transform: rotate(-30deg);
+        }
+    }
+}
+.male__check .form-check-input:checked[type=radio] {
+    background-image: url(../../assets/img/footer/dot.png);
+    background-size: 1vh;
+}
+.male__check .form-check-input:checked {
+    background-color: var(--title);
+    border-color: var(--border1);
+}
+.male__check {
+    padding-top: 24px;
+    margin-top: 24px;
+    border-top: 1px solid var(--border1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .form-check-input {
+        min-width: 20px;
+        height: 20px;
+        box-shadow: none;
+        outline: none;
+        border: 1px solid #414141;
+        margin-right: 6px;
+        background-color: var(--footer);
+    }
+    label{
+        color: var(--ftext);
+        font-size: 14px;
+        @include bodyfont;
+    }
+}
+
+//footer top
+.quick__link{
+    li{
+        a{
+            position: relative;
+            padding-left: 16px;
+            &::before{
+                position: absolute;
+                width: 7px;
+                left: 0;
+                height: 7px;
+                border-radius: 2px;
+                background: var(--ftext);
+                content: "";
+                top: 9px;
+            }
+        }
+        &:not(:last-child){
+            margin-bottom: 13px;
+            @include breakpoint(max-xl){
+                margin-bottom: 8px;
+            }
+        }
+        &:hover{
+            a{
+                color: var(--base);
+                margin-left: 5px;
+                &::before{
+                    background: var(--base);
+                }
+            }
+        }
+    }
+}
+.footer__contact{
+    li{
+        &:not(:last-child){
+            margin-bottom: 16px;
+        }
+        a{
+            span{
+                width: calc(100% - 40px);
+                display: block;
+            }
+        }
+    }
+}
+.flogo{
+    max-width: 120px;
+    img{
+        width: 100%;
+    }
+}
+//footer bottom
+.footer__bottom{
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 1px solid #414141;
+    @include breakpoint(max-lg){
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 0;
+    }
+    p{
+        text-align: center;
+        a{
+            &:hover{
+                color: var(--white);
+            }
+        }
+    }
+    .btext{
+        a{
+            &:hover{
+                color: var(--white);
+            }
+        }
+    }
+    @include breakpoint(max-xxsmall){
+        padding: 25px 0;
+    }
+}
+.footer__bottomtwo{
+    border-top: unset;
+    max-width: 800px;
+    .btext{
+        position: relative;
+        a{
+            &:hover{
+                color: var(--white);
+            }
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            top: 10px;
+            left: calc(100% + 16px);
+            width: 440px;
+            height: 1px;
+            background: var(--border1);
+            @include breakpoint(max-xl){
+                width: 250px;
+            }
+        }
+    }
+}
+.custom__footeremail{
+    background: linear-gradient(135deg, #4569E7 0%, #B81AEF 100%);
+    padding: 40px 40px 60px;
+    margin-bottom: -70px;
+    @include breakpoint(max-xl){
+        padding: 35px 20px 40px;
+    }
+    @include breakpoint(max-lg){
+        margin-bottom: 0px;
+    }
+    form{
+        background: var(--white);
+        padding: 4px 20px 5px 1px;
+        border-radius: 100px;
+        button{
+            i{
+                color: var(--base);
+            }
+        }
+        input{
+            color: #BBBBBB;
+            padding: 12px 20px;
+        }
+        ::placeholder{
+            color: #BBBBBB;
+        }
+    }
+    .male__check{
+        border-top: unset;
+        padding-top: 0;
+        margin-top: 20px;
+        .form-check-input{
+            background-color: var(--white);
+            border-color: var(--white);
+        }
+        label{
+            color: var(--white);
+        }
+    }
+}
+.footer__toptwo{
+    @include breakpoint(max-lg){
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    @include breakpoint(max-lg){
+        padding-bottom: 20px;
+    }
+}
+.footer__bottomthree{
+    justify-content: space-between;
+    gap: 10px 15px;
+    @include breakpoint(max-md){
+        justify-content: center;
+    }
+}
+//footer 
+
+//call to action
+.clllto__action{
+    background: url(../../assets/img/spnosor/sponsorbg.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 31px 40px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    justify-content: space-between;
+    form{
+        justify-content: space-between;
+        width: 50%;
+        background: var(--white);
+        border-radius: 100px;
+        padding: 4px;
+        input{
+            background: transparent;
+            outline: none;
+            border: unset;
+            padding: 10px 10px;
+            color: #BBB;
+            width: 100%;
+        }
+        ::placeholder{
+            color: #BBB;
+        }
+        button{
+            background: transparent;
+            outline: none;
+            border: unset;
+            padding: 10px 10px;
+        }
+    }
+    h2{
+        @include breakpoint(max-xl){
+            font-size: 29px;
+        }
+        @include breakpoint(max-lg){
+            font-size: 22px;
+        }
+    }
+    @include breakpoint(max-md){
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 30px 30px;
+        form{
+            width: 100%;
+        }
+    }
+}
+//call to action

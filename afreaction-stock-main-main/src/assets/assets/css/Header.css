@@ -1,0 +1,162 @@
+body {
+    padding-top: 70px; /* Adjust based on your header height */
+  }
+  
+/* Header.css */
+
+/* CSS Variables for easy customization */
+:root {
+    --header-text-color: #fff;
+    --header-hover-color: rgba(255, 255, 255, 0.9);
+    --nav-item-padding: 0.75rem 1rem;
+    --dropdown-bg: rgba(255, 255, 255, 0.95);
+    --dropdown-text: #333;
+    --dropdown-hover-bg: #f8f9fa;
+    --btn-primary-bg: #fff;
+    --btn-primary-border: #fff;
+    --btn-primary-text: #007bff;
+    --btn-primary-hover-bg: #f1f1f1;
+    --text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Transparent Header Container */
+  .site-header {
+    background: transparent; /* Transparent background */
+    color: var(--header-text-color);
+    position: absolute;  /* Overlays the content */
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+    transition: background 0.3s ease;
+    padding: 0.5rem 0;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-brand img {
+    max-height: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Navbar toggler for mobile */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* Navbar items */
+  .navbar-nav {
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: var(--header-text-color) !important;
+    padding: var(--nav-item-padding);
+    transition: color 0.3s ease;
+    font-weight: 500;
+    text-shadow: var(--text-shadow);
+  }
+  
+  .nav-link:hover,
+  .nav-link:focus {
+    color: var(--header-hover-color) !important;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    background: var(--dropdown-bg);
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .dropdown-item {
+    color: var(--dropdown-text);
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background: var(--dropdown-hover-bg);
+    color: var(--header-text-color);
+    text-shadow: none; /* Dropdown items usually don't need a shadow */
+  }
+  
+  /* Button Styles for header actions */
+  .btn {
+    border-radius: 0.3rem;
+    font-weight: 500;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-shadow: var(--text-shadow);
+  }
+  
+  .btn-outline-primary {
+    background-color: transparent;
+    border: 2px solid var(--btn-primary-border);
+    color: var(--btn-primary-text);
+  }
+  
+  .btn-outline-primary:hover,
+  .btn-outline-primary:focus {
+    background-color: var(--btn-primary-hover-bg);
+    color: var(--btn-primary-text);
+  }
+  
+  /* Primary Sign In Button */
+  .btn-primary {
+    background-color: var(--btn-primary-bg);
+    border: 2px solid var(--btn-primary-border);
+    color: var(--btn-primary-text);
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: var(--btn-primary-hover-bg);
+    color: var(--btn-primary-text);
+  }
+  
+  /* Header Bar (Mobile Menu Toggle) */
+  .header-bar {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .header-bar span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--header-text-color);
+    transition: background 0.3s ease;
+    box-shadow: var(--text-shadow);
+  }
+  
+  .header-bar:hover span {
+    background: var(--header-hover-color);
+  }
+  
+  /* Utility Classes for Responsive Design */
+  @media (max-width: 991px) {
+    .navbar-nav {
+      text-align: center;
+    }
+    .nav-item {
+      margin: 0.5rem 0;
+    }
+  }
+  

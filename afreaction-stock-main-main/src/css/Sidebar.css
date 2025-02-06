@@ -1,0 +1,72 @@
+
+
+/*#sidebar {*/
+/*    grid-area: sidebar;*/
+/*    height:  100%;*/
+/*    background-color: #022e5d;*/
+/*    overflow-y: auto;*/
+/*    transition: all  0.5s ease;*/
+/*    font-family: 'Roboto', sans-serif; !* New font family *!*/
+/*}*/
+
+/*.sidebar-title {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding:  15px  30px;*/
+/*    margin-bottom:  30px;*/
+/*}*/
+
+/*!* Remove duplicate .sidebar-title class *!*/
+
+/*.sidebar-logo {*/
+/*    display: grid;*/
+/*    padding:  10px  5px;*/
+/*    width:  250px;*/
+/*    height: auto;*/
+/*}*/
+
+/*.sidebar-brand {*/
+/*    margin-top:  5px;*/
+/*}*/
+
+/*.sidebar-list {*/
+/*    padding:  0  5px;*/
+/*    list-style-type: none;*/
+/*    margin-top:  30px;*/
+/*}*/
+
+/*.sidebar-list-item {*/
+/*    padding:  5px;*/
+/*    font-size:  20px;*/
+/*    color: #fff;*/
+/*    transition: background-color  0.3s ease; !* Smooth transition for hover *!*/
+/*}*/
+
+/*.sidebar-list-item:hover {*/
+/*    background-color: rgba(255,  255,  255,  0.2);*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!* Active state highlight *!*/
+/*.active-state {*/
+/*    background-color: rgba(255,  255,  255,  0.1);*/
+/*}*/
+
+/*.sidebar-list-item > a {*/
+/*    text-decoration: none;*/
+/*    color: inherit; !* Use inherited color instead of hardcoded white *!*/
+/*    font-size:  20px;*/
+/*    display: block; !* Full clickable area *!*/
+/*    padding:  5px; !* Space around the icon and text *!*/
+/*    border-radius:  5px; !* Optional: rounded corners for each item *!*/
+/*    box-shadow:  0  2px  4px rgba(0,  0,  0,  0.1); !* Optional: shadow for depth *!*/
+/*}*/
+
+/*.sidebar-responsive {*/
+/*    display: inline-block !important;*/
+/*    position: absolute;*/
+/*    z-index:  12 !important;*/
+/*}*/
+
+/*!* End Sidebar  *!*/

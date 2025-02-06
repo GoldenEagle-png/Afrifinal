@@ -1,0 +1,266 @@
+/* ===============================
+   CSS Variables for Easy Customization
+=============================== */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #db4437;
+    --facebook-color: #3b5998;
+    --light-bg: #f4f7fa;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --subtitle-color: #666;
+    --border-color: #ccc;
+    --input-focus-color: #007bff;
+}
+
+/* Global Reset & Typography */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* Background with subtle gradient and pattern */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 20px;  /* Prevent overlap with navbar */
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    background: url('../assets/download.png') center/cover no-repeat;
+}
+
+/* Card Container */
+.auth-card {
+    background: var(--card-bg);
+    max-width: 400px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(4px);
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out;
+    position: relative; /* Keeps it properly stacked */
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titles */
+.auth-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.auth-subtitle {
+    font-size: 15px;
+    margin-bottom: 25px;
+    color: var(--subtitle-color);
+}
+
+/* Form Styling */
+.auth-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--input-focus-color);
+    outline: none;
+}
+
+/* Social Login */
+.social-login {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.divider-text {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--subtitle-color);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Google Button */
+.google-btn {
+    background: var(--accent-color);
+}
+
+.google-btn:hover {
+    background: #c33d2e;
+}
+
+/* Facebook Button */
+.facebook-btn {
+    background: var(--facebook-color);
+}
+
+.facebook-btn:hover {
+    background: #324b81;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Terms and Conditions */
+.terms-check {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.terms-check input[type="checkbox"],
+.terms-check input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.1);
+}
+
+.terms-check a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-check a:hover {
+    text-decoration: underline;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background: #0069d9;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.secondary-btn {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.secondary-btn:hover {
+    background: #5a6268;
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+/* Footer Links */
+.auth-footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.create-account-btn {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.create-account-btn:hover {
+    color: #0056b3;
+}
+
+/* Responsive Fixes */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 30px 20px;
+    }
+    .auth-title {
+        font-size: 24px;
+    }
+}
+
+/* Navbar Fix */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures navbar stays above content */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 15px 0;
+}
+
+/* Adds space so content doesn't get hidden under navbar */
+.auth-page {
+    padding-top: 150px; /* Adjust for navbar height */
+}

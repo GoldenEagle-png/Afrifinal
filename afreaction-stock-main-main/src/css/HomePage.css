@@ -1,0 +1,120 @@
+/* Hero Section */
+.HomePage .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/bg-hero.png") no-repeat center;
+    background-size: cover;
+    color: blackS;
+    text-align: center;
+    padding: 7.5rem 5%;
+}
+
+/* Hero Banner */
+.HomePage .hero-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomePage .hero-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent container background */
+    border-radius: 100px;
+    padding: 12px 20px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden; /* Ensures elements stay within the container */
+    backdrop-filter: blur(10px); /* Optional: Adds a frosted glass effect */
+}
+
+.search-icon {
+    color: white;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+.search-input {
+    flex-grow: 1;
+    border: none; /* Remove borders for a clean look */
+    outline: none; /* No focus outlines */
+    background: transparent; /* Fully transparent background */
+    color: rgba(0, 0, 0, 0.8); /* Slightly opaque black text for better readability */
+    font-size: 1.1rem; /* Slightly larger font size for a modern look */
+    padding: 8px 12px; /* Add slight internal spacing for comfort */
+    margin: 0; /* No extra margins */
+    height: 100%; /* Stretch to container height */
+    line-height: 1.5; /* Improved vertical alignment for text */
+    transition: color 0.3s ease, background 0.3s ease; /* Smooth transitions for hover/focus effects */
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.5); /* Semi-transparent placeholder text for a subtle look */
+    font-size: 1rem; /* Match input font size for uniformity */
+}
+
+.search-input:focus {
+    color: rgba(0, 0, 0, 1); /* Darker text on focus for better readability */
+    background: rgba(255, 255, 255, 0.2); /* Slightly highlighted background when focused */
+    outline: none; /* Prevent default focus outlines */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Soft inner shadow for focus */
+}
+
+
+
+.search-select {
+    background: transparent;
+    border: none;
+    color: rgb(182, 176, 176);
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.search-select:focus {
+    outline: none;
+}
+
+.submit-btn {
+    display: none;
+}
+
+/* Tag Suggestions */
+.suggestion-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.suggestion-tag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 25px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suggestion-tag:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .HomePage .hero-banner h2 {
+        font-size: 1.8rem;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+}

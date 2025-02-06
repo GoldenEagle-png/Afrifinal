@@ -1,0 +1,32 @@
+.ImageGallery {
+    padding: 0 5%;
+    margin-top: 20px;
+}
+
+.ImageGallery .columns {
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - 20px) / 3)); /* Adjust for sidebar */
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.ImageGallery img {
+    width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.ImageGallery center {
+    width: 90vw;
+}
+
+@media screen and (max-width: 950px) {
+    .ImageGallery .columns {
+        grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns */
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .ImageGallery .columns {
+        grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+    }
+}
