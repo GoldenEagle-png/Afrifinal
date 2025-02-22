@@ -68,7 +68,7 @@ const togglePopup = (type) => {
       <header style={styles.header}>
         <h1 style={styles.logo}>
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <span style={styles.orange}>Afreaction</span>
+            <span style={styles.orange}>Afreation</span>
           </Link>
         </h1>
         <nav style={styles.nav}>

@@ -9,13 +9,14 @@ import bgImage from '../../assets/download.png';
 const Login = () => {
   const navigate = useNavigate();
   const [role, setRole] = useState('Client'); // Default role
+  const [email, setEmail] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add authentication logic here, then redirect based on role
     if (role === 'Admin') {
       navigate('/Stock-Images/admin');
-    } else if (role === 'Editor') {
+    } else if (role === 'Contributor') {
       navigate('/Stock-Images/editor');
     } else if (role === 'Client') {
       navigate('/Stock-Images/client');
@@ -52,7 +53,7 @@ const Login = () => {
                 onChange={(e) => setRole(e.target.value)}
               >
                 <option value="Admin">Admin</option>
-                <option value="Editor">Editor</option>
+                <option value="Contributor">Contributor</option>
                 <option value="Client">Client</option>
               </select>
             </div>
@@ -62,6 +63,8 @@ const Login = () => {
                 type="text"
                 className="form-input"
                 placeholder="Email Address"
+                value={email}  // Bind value to state
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>

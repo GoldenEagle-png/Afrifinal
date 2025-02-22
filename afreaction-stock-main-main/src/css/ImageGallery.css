@@ -5,28 +5,87 @@
 
 .ImageGallery .columns {
     display: grid;
-    grid-template-columns: repeat(3, calc((100% - 20px) / 3)); /* Adjust for sidebar */
+    grid-template-columns: repeat(3, calc((100% - 20px) / 3)); 
     grid-template-rows: auto;
     gap: 1rem;
 }
 
 .ImageGallery img {
-    width: 100%; /* Responsive images */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
 }
 
 .ImageGallery center {
     width: 90vw;
 }
 
-@media screen and (max-width: 950px) {
-    .ImageGallery .columns {
-        grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns */
+.load-more {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #e39206;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.load-more:hover {
+    background-color: #684004;
+    transform: scale(1.05);
+}
+
+.load-more:active {
+    transform: scale(0.95);
+}
+
+.load-more:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+.ImageElement {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ImageElement:hover {
+    transform: scale(1.03);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+}
+
+@media (max-width: 768px) {
+    .ImageGallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .load-more {
+        width: 100%;
+        margin: 10px 0;
     }
 }
 
-@media screen and (max-width: 550px) {
-    .ImageGallery .columns {
-        grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
-    }
-}

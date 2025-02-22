@@ -12,9 +12,7 @@ const PaginatedImageGallery = ({ query }) => {
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [columns, setColumns] = useState([]);
-    // const navigate = useNavigate(); // Initialize useNavigate
-
-    // Fetch images from the API
+   
     const fetchImages = useCallback(async (query, page) => {
         setIsLoading(true);
         try {
@@ -30,14 +28,14 @@ const PaginatedImageGallery = ({ query }) => {
         }
     }, []);
 
-    // Update the gallery when the query changes
+    
     useEffect(() => {
         setImages([]);
         setPage(1);
         fetchImages(query, 1);
     }, [query, fetchImages]);
 
-    // Update columns whenever the images or window size change
+    
     useEffect(() => {
         const updateColumns = () => {
             const columnCount = window.innerWidth <= 550 ? 1 : window.innerWidth <= 950 ? 2 : 3;
@@ -52,7 +50,7 @@ const PaginatedImageGallery = ({ query }) => {
         };
     }, [images]);
 
-    // Function to split an array into columns
+    
     const splitArray = (array, columnCount) => {
         const result = [];
         for (let i = columnCount; i > 0; i--) {
@@ -61,7 +59,7 @@ const PaginatedImageGallery = ({ query }) => {
         return result;
     };
 
-    // Load more images
+    
     const loadMoreImages = () => {
         if (page < totalPages && !isLoading) {
             const nextPage = page + 1;
@@ -70,7 +68,7 @@ const PaginatedImageGallery = ({ query }) => {
         }
     };
 
-    // Navigate to photo details when an image is clicked
+
     const handleImageClick = () => {
         window.location.href = 'http://localhost:63343/Stock-Images/src/assets/html/aseet%20main/photo-details.html?_ijt=hkpo4b0vbhks2kpdvbs9s4p93q&_ij_reload=RELOAD_ON_SAVE';
     };
@@ -86,7 +84,7 @@ const PaginatedImageGallery = ({ query }) => {
                                 src={item.webformatURL}
                                 key={item.id}
                                 alt=""
-                                onClick={() => handleImageClick(item.id)} // Add onClick handler
+                                onClick={() => handleImageClick(item.id)} 
                             />
                         ))}
                     </div>
@@ -94,13 +92,13 @@ const PaginatedImageGallery = ({ query }) => {
             </div>
             {isLoading && (
                 <center>
-                    <img className="loading" height='200px' width='200px' src={Loading} alt="Loading..." />
+                  <div className="loading-spinner"></div>
                 </center>
             )}
             {!isLoading && page < totalPages && (
-                <button className="load-more" onClick={loadMoreImages}>
-                    Load More
-                </button>
+               <button className="load-more" onClick={loadMoreImages} disabled={isLoading} >
+                 {isLoading ? 'Loading...' : 'Load More'}
+               </button>
             )}
         </div>
     );
